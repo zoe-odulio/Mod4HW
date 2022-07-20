@@ -176,4 +176,26 @@ def eta(first_stop, second_stop, route_map):
     '''
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    pass
+def eta_zen(first_stop, second_stop, route_map):
+    # create dictionary
+    # access the starting point
+    # access the ending point
+    travel_time = 0
+    on_route = False
+
+    for index, (key, value) in enumerate(list(route_map.items()) + list(route_map.items())):
+
+        if first_stop == key[0]:
+            print('start', key)
+            on_route = True
+        
+        print(index, key, value, on_route)
+
+        if on_route:
+            travel_time += value['travel_time_mins']
+
+        if on_route and second_stop == key[1]:
+            print('stop', key)
+            return travel_time
+
+eta_zen('ust', 'dlsu', route1)
