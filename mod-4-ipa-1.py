@@ -123,9 +123,6 @@ def tic_tac_toe(board):
                     return character
 
         return False                                                                                              
-    # print('Winner is',check_rows(board1, characters))
-    # print('Winner is',check_columns(board1, characters))
-    # print('Winner is',check_diagonal(board1, characters))
     
     row_winner = check_rows(board, characters)
     if (row_winner):
