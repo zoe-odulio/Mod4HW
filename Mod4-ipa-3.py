@@ -55,7 +55,7 @@ def relationship_status(from_member, to_member, social_graph):
                 "@eeebeee":  {"first_name":"Elizabeth","last_name":"Ilagan", "following":["@jobenilagan","@joeilagan"
                   ] },}
 def relationship_status(from_member, to_member, social_graph):
-    if (to_member in social_graph[from_member]['following']) and (from_member in social_graph[to_member['following']):
+    if (to_member in social_graph[from_member]['following']) and (from_member in social_graph[to_member]['following']):
       return "friends"
     elif to_member in social_graph[from_member]['following']:
       return "follower"
